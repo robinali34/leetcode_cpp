@@ -7,6 +7,8 @@
 
 #include "solution.h"
 
+namespace RemoveDuplicatesFromSortedArray {
+
 int Solution::removeDuplicates(std::vector<int>& nums) {
     int n = nums.size();
     if (n == 0) {
@@ -22,4 +24,6 @@ int Solution::removeDuplicates(std::vector<int>& nums) {
         }
     }
     return idx + 1;
+}
+
 }

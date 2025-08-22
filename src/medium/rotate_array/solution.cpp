@@ -8,6 +8,8 @@
 #include "solution.h"
 #include <algorithm>
 
+namespace RotateArray {
+
 void Solution::rotate(std::vector<int>& nums, int k) {
     // In-place modification using std::rotate
     int n = nums.size();
@@ -41,4 +43,6 @@ void Solution::reverse(std::vector<int>& nums, int start, int end) {
         start++;
         end--;
     }
+}
+
 }
