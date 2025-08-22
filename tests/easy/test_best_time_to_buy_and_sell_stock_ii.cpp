@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. BSD 3-Clause License All Rights Reserved.
+ * Copyright 2021 Robina Li. MIT License
  * @file : test_best_time_to_buy_and_sell_stock_ii.cpp
  * @desc : Test file for Best Time to Buy and Sell Stock II solution
  */
@@ -7,11 +7,10 @@
 #include <iostream>
 #include <vector>
 #include <cassert>
-#include "../../src/easy/best_time_to_buy_and_sell_stock_ii/solution.h"
 #include "../../src/easy/best_time_to_buy_and_sell_stock_ii/solution.cpp"
 
 void testMaxProfit() {
-    BestTimeToBuyAndSellStockII::Solution solution;
+    Solution solution;
     
     // Test case 1: [7,1,5,3,6,4] -> 7
     std::vector<int> prices1 = {7, 1, 5, 3, 6, 4};

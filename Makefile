@@ -24,6 +24,11 @@ all: $(MAIN_EXEC) $(TEST_EXEC)
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 	mkdir -p $(BIN_DIR)
+	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/easy/best_time_to_buy_and_sell_stock_ii
+	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/easy/remove_duplicates_from_sorted_array
+	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/medium/rotate_array
+	mkdir -p $(BUILD_DIR)/$(TEST_DIR)/easy
+	mkdir -p $(BUILD_DIR)/$(TEST_DIR)/medium
 
 # Main executable
 $(MAIN_EXEC): $(OBJECTS) | $(BUILD_DIR)
@@ -46,12 +51,18 @@ test: $(TEST_EXEC)
 clean:
 	rm -rf $(BUILD_DIR)
 
+# Install dependencies (Ubuntu/Debian)
+install-deps:
+	sudo apt-get update
+	sudo apt-get install -y build-essential cmake
+
 # Show help
 help:
 	@echo "Available targets:"
 	@echo "  all          - Build main executable and tests"
 	@echo "  test         - Run tests"
 	@echo "  clean        - Remove build files"
+	@echo "  install-deps - Install build dependencies"
 	@echo "  help         - Show this help message"
 
-.PHONY: all test clean help
+.PHONY: all test clean install-deps help

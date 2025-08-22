@@ -6,6 +6,23 @@
 
 This repository contains my solutions to LeetCode problems implemented in C++. The project is designed with a clean, modular architecture that makes it easy to add new solutions and maintain existing code.
 
+## 📊 Google Top Questions
+
+|      | [Google top questions]                                           |Difficulty|Wiki                |Solution                 |
+| ---- | ---------------------------------------------------------------- | -------- |------------------- |-------------------------|
+| 26   | [Remove Duplicates from Sorted Array]              |   [Easy]  |                    |[Remove Duplicates from Sorted Array Solution] |
+| 122   | [Best Time to Buy and Sell Stock II]              |   [Easy]  |                    |[Best Time to Buy and Sell Stock II Solution] |
+| 189   | [Rotate Array]                                    |  [Medium] |                    |[Rotate Array Solution] |
+
+[Remove Duplicates from Sorted Array]: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+[Remove Duplicates from Sorted Array Solution]: https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/remove_duplicates_from_sorted_array/solution.cpp
+[Best Time to Buy and Sell Stock II]: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
+[Best Time to Buy and Sell Stock II Solution]: https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/best_time_to_buy_and_sell_stock_ii/solution.cpp
+[Rotate Array]: https://leetcode.com/problems/rotate-array/
+[Rotate Array Solution]: https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/rotate_array/solution.cpp
+[Easy]: https://github.com/robinali/leetcode/tree/main/src/easy
+[Medium]: https://github.com/robinali/leetcode/tree/main/src/medium
+
 ## 🚀 Features
 
 - **Modern C++17** with best practices
@@ -330,12 +347,14 @@ You can modify the `Makefile` or `CMakeLists.txt` to:
 
 ## 📊 Current Solutions
 
+See the [Google Top Questions](#-google-top-questions) table above for a complete list of implemented solutions with direct links to both the LeetCode problems and the C++ solutions in this repository.
+
 ### Easy Problems
-- [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
-- [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+- [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) - [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/best_time_to_buy_and_sell_stock_ii/solution.cpp)
+- [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) - [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/remove_duplicates_from_sorted_array/solution.cpp)
 
 ### Medium Problems
-- [Rotate Array](https://leetcode.com/problems/rotate-array/)
+- [Rotate Array](https://leetcode.com/problems/rotate-array/) - [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/rotate_array/solution.cpp)
 
 ## 🤝 Contributing
 

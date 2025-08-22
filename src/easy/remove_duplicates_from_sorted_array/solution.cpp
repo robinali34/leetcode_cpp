@@ -1,13 +1,11 @@
 /*
- * Copyright 2021 Robina Li. BSD 3-Clause License All Rights Reserved.
+ * Copyright 2021 Robina Li. MIT License
  * @file : solution.cpp
  * @desc : Solution for Leetcode
  * Reference : https://leetcode.com/problems/remove-duplicates-from-sorted-array/
  */
 
 #include "solution.h"
-
-namespace RemoveDuplicatesFromSortedArray {
 
 int Solution::removeDuplicates(std::vector<int>& nums) {
     int n = nums.size();
@@ -24,6 +22,4 @@ int Solution::removeDuplicates(std::vector<int>& nums) {
         }
     }
     return idx + 1;
-}
-
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. BSD 3-Clause License All Rights Reserved.
+ * Copyright 2021 Robina Li. MIT License
  * @file : solution.cpp
  * @desc : Solution for Leetcode
  * Reference : https://leetcode.com/problems/rotate-array/
@@ -7,8 +7,6 @@
 
 #include "solution.h"
 #include <algorithm>
-
-namespace RotateArray {
 
 void Solution::rotate(std::vector<int>& nums, int k) {
     // In-place modification using std::rotate
@@ -43,6 +41,4 @@ void Solution::reverse(std::vector<int>& nums, int start, int end) {
         start++;
         end--;
     }
-}
-
 }
