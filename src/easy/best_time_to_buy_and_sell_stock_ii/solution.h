@@ -10,9 +10,11 @@
 
 #include <vector>
 
-class Solution {
-public:
-    int maxProfit(std::vector<int>& prices);
-};
+namespace BestTimeToBuyAndSellStockII {
+    class Solution {
+    public:
+        int maxProfit(std::vector<int>& prices);
+    };
+}
 
 #endif // BEST_TIME_TO_BUY_AND_SELL_STOCK_II_SOLUTION_H

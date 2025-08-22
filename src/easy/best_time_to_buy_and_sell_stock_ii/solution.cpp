@@ -8,7 +8,7 @@
 #include "solution.h"
 #include <algorithm>
 
-int Solution::maxProfit(std::vector<int>& prices) {
+int BestTimeToBuyAndSellStockII::Solution::maxProfit(std::vector<int>& prices) {
     // Iterate all prices from idx 1, get max difference prices[idx] - prices[idx - 1]
     int profit = 0;
     for (size_t i = 1; i < prices.size(); ++i) {

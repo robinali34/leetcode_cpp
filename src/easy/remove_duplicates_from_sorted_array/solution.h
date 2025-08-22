@@ -10,9 +10,11 @@
 
 #include <vector>
 
-class Solution {
-public:
-    int removeDuplicates(std::vector<int>& nums);
-};
+namespace RemoveDuplicatesFromSortedArray {
+    class Solution {
+    public:
+        int removeDuplicates(std::vector<int>& nums);
+    };
+}
 
 #endif // REMOVE_DUPLICATES_FROM_SORTED_ARRAY_SOLUTION_H

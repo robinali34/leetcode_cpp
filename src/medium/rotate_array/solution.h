@@ -10,13 +10,15 @@
 
 #include <vector>
 
-class Solution {
-public:
-    void rotate(std::vector<int>& nums, int k);
-    void rotate1(std::vector<int>& nums, int k);
+namespace RotateArray {
+    class Solution {
+    public:
+        void rotate(std::vector<int>& nums, int k);
+        void rotate1(std::vector<int>& nums, int k);
 
-private:
-    void reverse(std::vector<int>& nums, int start, int end);
-};
+    private:
+        void reverse(std::vector<int>& nums, int start, int end);
+    };
+}
 
 #endif // ROTATE_ARRAY_SOLUTION_H

@@ -11,14 +11,15 @@ TESTS = $(shell find $(TEST_DIR) -name "*.cpp")
 
 # Object files
 OBJECTS = $(SOURCES:%.cpp=$(BUILD_DIR)/%.o)
-TEST_OBJECTS = $(TESTS:%.cpp=$(BUILD_DIR)/%.o)
 
-# Executables
+# Test executables (one per test file)
+TEST_EXECS = $(TESTS:%.cpp=$(BUILD_DIR)/%.exe)
+
+# Main executable
 MAIN_EXEC = $(BIN_DIR)/leetcode_cpp
-TEST_EXEC = $(BIN_DIR)/run_tests
 
 # Default target
-all: $(MAIN_EXEC) $(TEST_EXEC)
+all: $(MAIN_EXEC) $(TEST_EXECS)
 
 # Create build directories
 $(BUILD_DIR):
@@ -26,7 +27,7 @@ $(BUILD_DIR):
 	mkdir -p $(BIN_DIR)
 	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/easy/best_time_to_buy_and_sell_stock_ii
 	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/easy/remove_duplicates_from_sorted_array
-	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/medium/rotate_array
+	mkdir -p $(BUILD_DIR)/medium/rotate_array
 	mkdir -p $(BUILD_DIR)/$(TEST_DIR)/easy
 	mkdir -p $(BUILD_DIR)/$(TEST_DIR)/medium
 
@@ -34,18 +35,24 @@ $(BUILD_DIR):
 $(MAIN_EXEC): $(OBJECTS) | $(BUILD_DIR)
 	$(CXX) $(OBJECTS) -o $@
 
-# Test executable
-$(TEST_EXEC): $(TEST_OBJECTS) | $(BUILD_DIR)
-	$(CXX) $(TEST_OBJECTS) -o $@
+# Test executables (build each test separately)
+$(BUILD_DIR)/%.exe: %.cpp | $(BUILD_DIR)
+	@mkdir -p $(dir $@)
+	$(CXX) $(CXXFLAGS) $< -o $@
 
 # Compile source files
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
 	@mkdir -p $(dir $@)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# Run tests
-test: $(TEST_EXEC)
-	$(TEST_EXEC)
+# Run all tests
+test: $(TEST_EXECS)
+	@echo "Running all tests..."
+	@for test in $(TEST_EXECS); do \
+		echo "Running $$test..."; \
+		$$test; \
+		echo ""; \
+	done
 
 # Clean build files
 clean:

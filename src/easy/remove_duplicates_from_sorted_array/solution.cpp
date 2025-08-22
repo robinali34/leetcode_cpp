@@ -7,7 +7,7 @@
 
 #include "solution.h"
 
-int Solution::removeDuplicates(std::vector<int>& nums) {
+int RemoveDuplicatesFromSortedArray::Solution::removeDuplicates(std::vector<int>& nums) {
     int n = nums.size();
     if (n == 0) {
         return 0;

@@ -10,7 +10,7 @@
 #include "../../src/easy/remove_duplicates_from_sorted_array/solution.cpp"
 
 void testRemoveDuplicates() {
-    Solution solution;
+    RemoveDuplicatesFromSortedArray::Solution solution;
     
     // Test case 1: [1,1,2] -> 2, [1,2,_]
     std::vector<int> nums1 = {1, 1, 2};

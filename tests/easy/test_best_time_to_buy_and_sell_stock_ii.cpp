@@ -10,7 +10,7 @@
 #include "../../src/easy/best_time_to_buy_and_sell_stock_ii/solution.cpp"
 
 void testMaxProfit() {
-    Solution solution;
+    BestTimeToBuyAndSellStockII::Solution solution;
     
     // Test case 1: [7,1,5,3,6,4] -> 7
     std::vector<int> prices1 = {7, 1, 5, 3, 6, 4};

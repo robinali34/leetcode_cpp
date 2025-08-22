@@ -12,7 +12,7 @@
 
 void testBestTimeToBuyAndSellStockII() {
     std::cout << "\n=== Testing Best Time to Buy and Sell Stock II ===" << std::endl;
-    Solution solution;
+    BestTimeToBuyAndSellStockII::Solution solution;
     
     // Test case 1: [7,1,5,3,6,4] -> 7
     std::vector<int> prices1 = {7, 1, 5, 3, 6, 4};
@@ -32,7 +32,7 @@ void testBestTimeToBuyAndSellStockII() {
 
 void testRemoveDuplicates() {
     std::cout << "\n=== Testing Remove Duplicates from Sorted Array ===" << std::endl;
-    Solution solution;
+    RemoveDuplicatesFromSortedArray::Solution solution;
     
     // Test case 1: [1,1,2] -> 2, [1,2,_]
     std::vector<int> nums1 = {1, 1, 2};
@@ -59,7 +59,7 @@ void testRemoveDuplicates() {
 
 void testRotateArray() {
     std::cout << "\n=== Testing Rotate Array ===" << std::endl;
-    Solution solution;
+    RotateArray::Solution solution;
     
     // Test case 1: [1,2,3,4,5,6,7], k=3 -> [5,6,7,1,2,3,4]
     std::vector<int> nums1 = {1, 2, 3, 4, 5, 6, 7};

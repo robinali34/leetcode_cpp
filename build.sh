@@ -15,7 +15,7 @@ if [ $? -eq 0 ]; then
     ./build/bin/leetcode_cpp
     echo ""
     echo "Running tests..."
-    ./build/bin/run_tests
+    make test
 else
     echo "Build failed!"
     exit 1

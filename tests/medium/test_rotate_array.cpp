@@ -10,7 +10,7 @@
 #include "../../src/medium/rotate_array/solution.cpp"
 
 void testRotate() {
-    Solution solution;
+    RotateArray::Solution solution;
     
     // Test case 1: [1,2,3,4,5,6,7], k=3 -> [5,6,7,1,2,3,4]
     std::vector<int> nums1 = {1, 2, 3, 4, 5, 6, 7};
@@ -62,7 +62,7 @@ void testRotate() {
 }
 
 void testRotate1() {
-    Solution solution;
+    RotateArray::Solution solution;
     
     // Test case 1: [1,2,3,4,5,6,7], k=3 -> [5,6,7,1,2,3,4]
     std::vector<int> nums1 = {1, 2, 3, 4, 5, 6, 7};

@@ -20,8 +20,8 @@ This repository contains my solutions to LeetCode problems implemented in C++. T
 [Best Time to Buy and Sell Stock II Solution]: https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/best_time_to_buy_and_sell_stock_ii/solution.cpp
 [Rotate Array]: https://leetcode.com/problems/rotate-array/
 [Rotate Array Solution]: https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/rotate_array/solution.cpp
-[Easy]: https://github.com/robinali/leetcode/tree/main/src/easy
-[Medium]: https://github.com/robinali/leetcode/tree/main/src/medium
+[Easy]: https://github.com/robinali34/leetcode_c_cplusplus/tree/master/src/easy
+[Medium]: https://github.com/robinali34/leetcode_c_cplusplus/tree/master/src/medium
 
 ## 🚀 Features
 
