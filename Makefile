@@ -25,9 +25,19 @@ all: $(MAIN_EXEC) $(TEST_EXECS)
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 	mkdir -p $(BIN_DIR)
+	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/easy/two_sum
+	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/easy/best_time_to_buy_and_sell_stock
 	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/easy/best_time_to_buy_and_sell_stock_ii
 	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/easy/remove_duplicates_from_sorted_array
-	mkdir -p $(BUILD_DIR)/medium/rotate_array
+	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/easy/valid_anagram
+	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/medium/longest_substring_without_repeating_characters
+	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/medium/maximum_subarray
+	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/medium/product_of_array_except_self
+	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/medium/maximum_product_subarray
+	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/medium/rotate_array
+	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/medium/merge_intervals
+	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/medium/insert_interval
+	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/medium/non_overlapping_intervals
 	mkdir -p $(BUILD_DIR)/$(TEST_DIR)/easy
 	mkdir -p $(BUILD_DIR)/$(TEST_DIR)/medium
 
