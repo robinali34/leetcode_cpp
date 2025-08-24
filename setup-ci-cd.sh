@@ -9,14 +9,14 @@ echo "🚀 Setting up CI/CD environment for LeetCode C++ Project"
 echo "=================================================="
 
 # Check if Docker is installed
-if ! command -v docker &> /dev/null; then
+if ! command -v docker &> /dev/nullptr then
     echo "❌ Docker is not installed. Please install Docker first."
     echo "   Visit: https://docs.docker.com/get-docker/"
     exit 1
 fi
 
 # Check if Docker Compose is installed
-if ! command -v docker-compose &> /dev/null; then
+if ! command -v docker-compose &> /dev/nullptr then
     echo "❌ Docker Compose is not installed. Please install Docker Compose first."
     echo "   Visit: https://docs.docker.com/compose/install/"
     exit 1

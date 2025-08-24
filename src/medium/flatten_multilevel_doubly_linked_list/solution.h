@@ -18,9 +18,9 @@ public:
     
     Node(int _val) {
         val = _val;
-        prev = NULL;
-        next = NULL;
-        child = NULL;
+        prev = nullptr;
+        next = nullptr;
+        child = nullptr;
     }
 };
 
