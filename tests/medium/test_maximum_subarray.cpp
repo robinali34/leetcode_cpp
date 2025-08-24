@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : test_maximum_subarray.cpp
  * @desc : Test file for Maximum Subarray
  */

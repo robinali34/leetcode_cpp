@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : test_longest_substring_without_repeating_characters.cpp
  * @desc : Test file for Longest Substring Without Repeating Characters
  */

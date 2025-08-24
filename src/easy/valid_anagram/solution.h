@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : solution.h
  * @desc : Header file for Valid Anagram
  * Reference : https://leetcode.com/problems/valid-anagram/
@@ -10,10 +10,13 @@
 
 #include <string>
 
+using namespace std;
+
 namespace ValidAnagram {
 class Solution {
 public:
-    bool isAnagram(std::string s, std::string t);
+    bool isAnagram(string s, string t);
+    bool isAnagram2(string s, string t);
 };
 }
 

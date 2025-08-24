@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : solution.h
  * @desc : Header file for Non-overlapping Intervals
  * Reference : https://leetcode.com/problems/non-overlapping-intervals/
@@ -10,10 +10,12 @@
 
 #include <vector>
 
+using namespace std;
+
 namespace NonOverlappingIntervals {
 class Solution {
 public:
-    int eraseOverlapIntervals(std::vector<std::vector<int>>& intervals);
+    int eraseOverlapIntervals(vector<vector<int>>& intervals);
 };
 }
 

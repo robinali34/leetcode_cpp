@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : test_best_time_to_buy_and_sell_stock.cpp
  * @desc : Test file for Best Time to Buy and Sell Stock
  */

@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : solution.h
  * @desc : Header file for Product of Array Except Self
  * Reference : https://leetcode.com/problems/product-of-array-except-self/
@@ -10,10 +10,12 @@
 
 #include <vector>
 
+using namespace std;
+
 namespace ProductOfArrayExceptSelf {
 class Solution {
 public:
-    std::vector<int> productExceptSelf(std::vector<int>& nums);
+    vector<int> productExceptSelf(vector<int>& nums);
 };
 }
 

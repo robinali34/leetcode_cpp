@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : solution.h
  * @desc : Header file for Best Time to Buy and Sell Stock II solution
  * Reference : https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
@@ -10,10 +10,12 @@
 
 #include <vector>
 
+using namespace std;
+
 namespace BestTimeToBuyAndSellStockII {
     class Solution {
     public:
-        int maxProfit(std::vector<int>& prices);
+        int maxProfit(vector<int>& prices);
     };
 }
 

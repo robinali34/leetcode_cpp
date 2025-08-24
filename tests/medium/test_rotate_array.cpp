@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. BSD 3-Clause License All Rights Reserved.
+ * Copyright 2025 Robina Li. BSD 3-Clause License All Rights Reserved.
  * @file : test_rotate_array.cpp
  * @desc : Test file for Rotate Array solution
  */

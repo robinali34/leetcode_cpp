@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : solution.cpp
  * @desc : Solution for Longest Substring Without Repeating Characters
  * Reference : https://leetcode.com/problems/longest-substring-without-repeating-characters/
@@ -9,10 +9,12 @@
 #include <vector>
 #include <algorithm>
 
+using namespace std;
+
 namespace LongestSubstringWithoutRepeatingCharacters {
 
-int Solution::lengthOfLongestSubstring(std::string s) {
-    std::vector<int> charIndex(128, -1);
+int Solution::lengthOfLongestSubstring(string s) {
+    vector<int> charIndex(128, -1);
     int maxLength = 0;
     int start = 0;
     
@@ -21,7 +23,7 @@ int Solution::lengthOfLongestSubstring(std::string s) {
             start = charIndex[s[i]] + 1;
         }
         charIndex[s[i]] = i;
-        maxLength = std::max(maxLength, i - start + 1);
+        maxLength = max(maxLength, i - start + 1);
     }
     
     return maxLength;

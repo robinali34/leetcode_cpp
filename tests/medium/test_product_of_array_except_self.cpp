@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : test_product_of_array_except_self.cpp
  * @desc : Test file for Product of Array Except Self
  */

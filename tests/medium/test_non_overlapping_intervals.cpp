@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : test_non_overlapping_intervals.cpp
  * @desc : Test file for Non-overlapping Intervals
  */

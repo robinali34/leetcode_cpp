@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : solution.h
  * @desc : Header file for Two Sum
  * Reference : https://leetcode.com/problems/two-sum/
@@ -10,10 +10,12 @@
 
 #include <vector>
 
+using namespace std;
+
 namespace TwoSum {
 class Solution {
 public:
-    std::vector<int> twoSum(std::vector<int>& nums, int target);
+    vector<int> twoSum(vector<int>& nums, int target);
 };
 }
 

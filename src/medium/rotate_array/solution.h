@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : solution.h
  * @desc : Header file for Rotate Array solution
  * Reference : https://leetcode.com/problems/rotate-array/
@@ -10,14 +10,16 @@
 
 #include <vector>
 
+using namespace std;
+
 namespace RotateArray {
     class Solution {
     public:
-        void rotate(std::vector<int>& nums, int k);
-        void rotate1(std::vector<int>& nums, int k);
+        void rotate(vector<int>& nums, int k);
+        void rotate1(vector<int>& nums, int k);
 
     private:
-        void reverse(std::vector<int>& nums, int start, int end);
+        void reverse(vector<int>& nums, int start, int end);
     };
 }
 

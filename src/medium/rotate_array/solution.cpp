@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : solution.cpp
  * @desc : Solution for Leetcode
  * Reference : https://leetcode.com/problems/rotate-array/
@@ -8,8 +8,10 @@
 #include "solution.h"
 #include <algorithm>
 
-void RotateArray::Solution::rotate(std::vector<int>& nums, int k) {
-    // In-place modification using std::rotate
+using namespace std;
+
+void RotateArray::Solution::rotate(vector<int>& nums, int k) {
+    // In-place modification using rotate
     int n = nums.size();
     if (n == 0) return;
     
@@ -19,7 +21,7 @@ void RotateArray::Solution::rotate(std::vector<int>& nums, int k) {
     }
 }
 
-void RotateArray::Solution::rotate1(std::vector<int>& nums, int k) {
+void RotateArray::Solution::rotate1(vector<int>& nums, int k) {
     // Rotate using reverse method:
     // 1. Reverse all
     // 2. Reverse idx 0 to k - 1
@@ -35,9 +37,9 @@ void RotateArray::Solution::rotate1(std::vector<int>& nums, int k) {
     reverse(nums, 0, k - 1);
 }
 
-void RotateArray::Solution::reverse(std::vector<int>& nums, int start, int end) {
+void RotateArray::Solution::reverse(vector<int>& nums, int start, int end) {
     while (start < end) {
-        std::swap(nums[start], nums[end]);
+        swap(nums[start], nums[end]);
         start++;
         end--;
     }

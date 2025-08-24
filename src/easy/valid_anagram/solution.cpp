@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : solution.cpp
  * @desc : Solution for Valid Anagram
  * Reference : https://leetcode.com/problems/valid-anagram/
@@ -7,26 +7,37 @@
 
 #include "solution.h"
 #include <vector>
+#include <algorithm>
+
+using namespace std;
 
 namespace ValidAnagram {
 
-bool Solution::isAnagram(std::string s, std::string t) {
-    if (s.length() != t.length()) return false;
-    
-    std::vector<int> charCount(26, 0);
-    
-    // Count characters in string s
-    for (char c : s) {
-        charCount[c - 'a']++;
+bool Solution::isAnagram(string s, string t) {
+    if (s.length() != t.length()) {
+        return false;
     }
-    
-    // Decrement characters in string t
-    for (char c : t) {
-        charCount[c - 'a']--;
-        if (charCount[c - 'a'] < 0) return false;
+    sort(s.begin(), s.end());
+    sort(t.begin(), t.end());
+    return s == t;
+}
+
+bool Solution::isAnagram2(string s, string t) {
+    if (s.length() != t.length()) {
+        return false;
     }
-    
+    vector<int> table(26, 0);
+    for (auto& ch: s) {
+        table[ch - 'a']++;
+    }
+    for (auto& ch: t) {
+        table[ch - 'a']--;
+        if (table[ch - 'a'] < 0) {
+            return false;
+        }
+    }
     return true;
 }
+
 
 }

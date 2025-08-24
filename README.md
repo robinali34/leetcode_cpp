@@ -281,7 +281,7 @@ mkdir -p tests/easy
 Create `src/easy/your_problem_name/solution.h`:
 ```cpp
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : solution.h
  * @desc : Header file for Your Problem Name
  * Reference : https://leetcode.com/problems/your-problem-url/
@@ -307,7 +307,7 @@ public:
 Create `src/easy/your_problem_name/solution.cpp`:
 ```cpp
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : solution.cpp
  * @desc : Solution for Your Problem Name
  * Reference : https://leetcode.com/problems/your-problem-url/
@@ -329,7 +329,7 @@ int Solution::yourMethod(std::vector<int>& nums) {
 Create `tests/easy/test_your_problem_name.cpp`:
 ```cpp
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : test_your_problem_name.cpp
  * @desc : Test file for Your Problem Name
  */

@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : solution.h
  * @desc : Header file for Maximum Subarray
  * Reference : https://leetcode.com/problems/maximum-subarray/
@@ -10,10 +10,12 @@
 
 #include <vector>
 
+using namespace std;
+
 namespace MaximumSubarray {
 class Solution {
 public:
-    int maxSubArray(std::vector<int>& nums);
+    int maxSubArray(vector<int>& nums);
 };
 }
 

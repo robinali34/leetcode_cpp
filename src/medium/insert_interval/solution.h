@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : solution.h
  * @desc : Header file for Insert Interval
  * Reference : https://leetcode.com/problems/insert-interval/
@@ -10,10 +10,13 @@
 
 #include <vector>
 
+using namespace std;
+
 namespace InsertInterval {
 class Solution {
 public:
-    std::vector<std::vector<int>> insert(std::vector<std::vector<int>>& intervals, std::vector<int>& newInterval);
+    vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval);
+    vector<vector<int>> insert2(vector<vector<int>>& intervals, vector<int>& newInterval);
 };
 }
 

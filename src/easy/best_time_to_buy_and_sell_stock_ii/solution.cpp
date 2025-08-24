@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : solution.cpp
  * @desc : Solution for Leetcode
  * Reference : https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
@@ -10,7 +10,7 @@
 #include <climits>
 using namespace std;
 
-int BestTimeToBuyAndSellStockII::Solution::maxProfit(std::vector<int>& prices) {
+int BestTimeToBuyAndSellStockII::Solution::maxProfit(vector<int>& prices) {
     int minprice = INT_MAX;
     int maxprofit = 0;
     for (int i = 0; i < prices.size(); i++) {

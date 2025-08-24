@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : solution.h
  * @desc : Header file for Maximum Product Subarray
  * Reference : https://leetcode.com/problems/maximum-product-subarray/
@@ -10,10 +10,12 @@
 
 #include <vector>
 
+using namespace std;
+
 namespace MaximumProductSubarray {
 class Solution {
 public:
-    int maxProduct(std::vector<int>& nums);
+    int maxProduct(vector<int>& nums);
 };
 }
 

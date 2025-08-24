@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : solution.h
  * @desc : Header file for Longest Substring Without Repeating Characters
  * Reference : https://leetcode.com/problems/longest-substring-without-repeating-characters/
@@ -10,10 +10,12 @@
 
 #include <string>
 
+using namespace std;
+
 namespace LongestSubstringWithoutRepeatingCharacters {
 class Solution {
 public:
-    int lengthOfLongestSubstring(std::string s);
+    int lengthOfLongestSubstring(string s);
 };
 }
 

@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : solution.cpp
  * @desc : Solution for Leetcode
  * Reference : https://leetcode.com/problems/remove-duplicates-from-sorted-array/
@@ -7,7 +7,9 @@
 
 #include "solution.h"
 
-int RemoveDuplicatesFromSortedArray::Solution::removeDuplicates(std::vector<int>& nums) {
+using namespace std;
+
+int RemoveDuplicatesFromSortedArray::Solution::removeDuplicates(vector<int>& nums) {
     int n = nums.size();
     if (n == 0) {
         return 0;

@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : test_valid_anagram.cpp
  * @desc : Test file for Valid Anagram
  */

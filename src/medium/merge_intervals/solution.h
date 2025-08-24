@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Robina Li. MIT License
+ * Copyright 2025 Robina Li. MIT License
  * @file : solution.h
  * @desc : Header file for Merge Intervals
  * Reference : https://leetcode.com/problems/merge-intervals/
@@ -10,10 +10,15 @@
 
 #include <vector>
 
+using namespace std;
+
 namespace MergeIntervals {
 class Solution {
 public:
-    std::vector<std::vector<int>> merge(std::vector<std::vector<int>>& intervals);
+    vector<vector<int>> merge(vector<vector<int>>& intervals);
+    vector<vector<int>> merge2(vector<vector<int>>& intervals);
+    vector<vector<int>> mergeGraph(vector<vector<int>>& intervals);
+    vector<vector<int>> mergeConcise(vector<vector<int>>& intervals);
 };
 }
 
