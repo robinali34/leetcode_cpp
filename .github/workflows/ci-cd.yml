@@ -1,0 +1,163 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build-and-test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-20.04, macos-latest]
+        compiler: [gcc, clang]
+        exclude:
+          - os: macos-latest
+            compiler: gcc
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up environment
+      run: |
+        echo "OS: ${{ matrix.os }}"
+        echo "Compiler: ${{ matrix.compiler }}"
+        
+    - name: Install dependencies (Ubuntu)
+      if: matrix.os == 'ubuntu-latest' || matrix.os == 'ubuntu-20.04'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential cmake valgrind
+        if [ "${{ matrix.compiler }}" = "clang" ]; then
+          sudo apt-get install -y clang clang-tidy
+        fi
+
+    - name: Install dependencies (macOS)
+      if: matrix.os == 'macos-latest'
+      run: |
+        brew install cmake
+        if [ "${{ matrix.compiler }}" = "clang" ]; then
+          brew install llvm
+        fi
+
+    - name: Set compiler
+      run: |
+        if [ "${{ matrix.compiler }}" = "clang" ]; then
+          export CC=clang
+          export CXX=clang++
+        else
+          export CC=gcc
+          export CXX=g++
+        fi
+        echo "CC=$CC" >> $GITHUB_ENV
+        echo "CXX=$CXX" >> $GITHUB_ENV
+
+    - name: Build project
+      run: |
+        make clean
+        make all
+
+    - name: Run tests
+      run: |
+        # Run individual test executables
+        for test in build/tests/easy/*.exe build/tests/medium/*.exe; do
+          if [ -f "$test" ]; then
+            echo "Running test: $test"
+            $test
+          fi
+        done
+
+    - name: Run main executable
+      run: |
+        if [ -f "build/bin/leetcode_cpp" ]; then
+          echo "Running main executable"
+          timeout 30s ./build/bin/leetcode_cpp || true
+        fi
+
+    - name: Static analysis
+      if: matrix.compiler == 'clang'
+      run: |
+        # Run clang-tidy on source files
+        find src -name "*.cpp" -exec clang-tidy {} -- -std=c++17 \;
+
+  code-quality:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Run cppcheck
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cppcheck
+        cppcheck --enable=all --std=c++17 --language=c++ src/ 2> cppcheck_report.txt || true
+        cat cppcheck_report.txt
+
+    - name: Check formatting
+      run: |
+        # Check if all files have consistent formatting
+        find src tests -name "*.cpp" -o -name "*.h" | xargs grep -l "std::" || echo "No std:: prefixes found - formatting check passed"
+
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Run security scan
+      run: |
+        # Basic security checks
+        echo "Checking for potential security issues..."
+        
+        # Check for hardcoded secrets
+        if grep -r "password\|secret\|key\|token" src/ --exclude-dir=.git; then
+          echo "Warning: Potential hardcoded secrets found"
+        else
+          echo "No hardcoded secrets found"
+        fi
+        
+        # Check for dangerous functions
+        if grep -r "system\|popen\|exec" src/ --exclude-dir=.git; then
+          echo "Warning: Potentially dangerous system calls found"
+        else
+          echo "No dangerous system calls found"
+        fi
+
+  deploy:
+    needs: [build-and-test, code-quality, security-scan]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Create release artifacts
+      run: |
+        mkdir -p release
+        cp -r build/bin/* release/ || true
+        cp -r src/ release/
+        cp -r tests/ release/
+        cp Makefile release/
+        cp README.md release/
+        cp LICENSE release/
+        
+        # Create tar.gz archive
+        tar -czf leetcode_cpp_release.tar.gz release/
+        
+    - name: Upload release artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: leetcode_cpp_release
+        path: leetcode_cpp_release.tar.gz
+        retention-days: 30
+
+    - name: Create GitHub release
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: leetcode_cpp_release.tar.gz
+        generate_release_notes: true

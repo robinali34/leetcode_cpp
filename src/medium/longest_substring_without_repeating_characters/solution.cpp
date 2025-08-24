@@ -29,4 +29,29 @@ int Solution::lengthOfLongestSubstring(string s) {
     return maxLength;
 }
 
+
+bool checkRepeation(string& s, int start, int end) {
+    unordered_set<char> chars;
+
+    for (int i = start; i <= end; i++) {
+        char c = s[i];
+        if (chars.count(c)) {
+            return false;
+        }
+        chars.insert(c);
+    }
+    return true;
+}
+
+int Solution::lengthOfLongestSubstring3(string s) {
+    int n = s.length(), res = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = i; j < n; j++) {
+            if (checkRepeation(s, i, j)) {
+                res = max(res, j - i + 1);
+            }
+        }
+    }
+    return res;
+}
 }

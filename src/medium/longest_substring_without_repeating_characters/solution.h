@@ -16,6 +16,7 @@ namespace LongestSubstringWithoutRepeatingCharacters {
 class Solution {
 public:
     int lengthOfLongestSubstring(string s);
+    int lengthOfLongestSubstring3(string s);
 };
 }
 

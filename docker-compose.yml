@@ -1,0 +1,98 @@
+version: '3.8'
+
+services:
+  # Development environment
+  dev:
+    build:
+      context: .
+      target: builder
+    volumes:
+      - .:/app
+      - build_cache:/app/build
+    environment:
+      - CC=gcc
+      - CXX=g++
+      - CXXFLAGS=-std=c++17 -Wall -Wextra -g
+    command: tail -f /dev/null
+    profiles:
+      - dev
+
+  # Testing environment
+  test:
+    build:
+      context: .
+      target: tester
+    volumes:
+      - .:/app
+    environment:
+      - CC=gcc
+      - CXX=g++
+    profiles:
+      - test
+
+  # Production build
+  prod:
+    build:
+      context: .
+      target: production
+    profiles:
+      - prod
+
+  # Jenkins CI/CD server
+  jenkins:
+    image: jenkins/jenkins:lts-jdk17
+    container_name: jenkins-leetcode
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+      - .:/var/jenkins_home/workspace/leetcode_cpp
+    environment:
+      - JENKINS_OPTS=--httpPort=8080
+    profiles:
+      - jenkins
+
+  # SonarQube for code quality analysis
+  sonarqube:
+    image: sonarqube:community
+    container_name: sonarqube-leetcode
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_logs:/opt/sonarqube/logs
+    environment:
+      - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true
+    profiles:
+      - jenkins
+
+  # PostgreSQL for SonarQube (optional)
+  postgres:
+    image: postgres:13
+    container_name: postgres-leetcode
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: sonar
+      POSTGRES_PASSWORD: sonar
+      POSTGRES_DB: sonarqube
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    profiles:
+      - jenkins
+
+volumes:
+  build_cache:
+  jenkins_home:
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_logs:
+  postgres_data:
+
+networks:
+  default:
+    name: leetcode_network
