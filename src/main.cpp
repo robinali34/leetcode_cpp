@@ -23,6 +23,13 @@ using namespace std;
 #include "medium/non_overlapping_intervals/solution.h"
 #include "medium/longest_substring_without_repeating_characters/solution.h"
 
+// Basics demos (Design Patterns)
+#include "basics/adapter_pattern.h"
+#include "basics/command_pattern.h"
+#include "basics/bridge_pattern.h"
+#include "basics/builder_pattern.h"
+#include "basics/proxy_pattern.h"
+
 void testBestTimeToBuyAndSellStockII() {
     cout << "\n=== Testing Best Time to Buy and Sell Stock II ===" << endl;
     BestTimeToBuyAndSellStockII::Solution solution;
@@ -282,6 +289,35 @@ void testLongestSubstringWithoutRepeatingCharacters() {
     cout << "Test 2: \"pwwkew\" -> Expected: 3, Got: " << result2 << endl;
 }
 
+void demoPatterns() {
+    using namespace DesignPatterns;
+    cout << "\n=== Design Patterns Demo (Basics) ===" << endl;
+
+    // Adapter
+    AudioPlayer player;
+    cout << "Adapter: " << player.play("mp3", "song.mp3") << endl;
+    cout << "Adapter: " << player.play("mp4", "movie.mp4") << endl;
+
+    // Command
+    Light light;
+    RemoteControl remote;
+    remote.setCommands(std::make_unique<LightOnCommand>(light), std::make_unique<LightOffCommand>(light));
+    cout << "Command: " << remote.pressOn() << "; " << remote.pressOff() << endl;
+
+    // Bridge
+    auto vectorRenderer = std::make_shared<VectorRenderer>();
+    CircleBridge circle(vectorRenderer, 10.0f, 20.0f, 5.0f);
+    cout << "Bridge: " << circle.draw() << endl;
+
+    // Builder
+    Burger b = BurgerBuilder{}.bun("brioche").patty("chicken").sauce("mayo").cheese(true).build();
+    cout << "Builder: " << b.description() << endl;
+
+    // Proxy
+    ProxyImage img("landscape.png");
+    cout << "Proxy: " << img.display() << endl;
+}
+
 int main() {
     cout << "LeetCode Solutions in C++" << endl;
     cout << "=========================" << endl;
@@ -300,6 +336,7 @@ int main() {
         testInsertInterval();
         testNonOverlappingIntervals();
         testLongestSubstringWithoutRepeatingCharacters();
+        demoPatterns();
         
         cout << "\n=== All demonstrations completed successfully ===" << endl;
         return 0;

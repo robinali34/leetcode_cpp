@@ -25,6 +25,8 @@ all: $(MAIN_EXEC) $(TEST_EXECS)
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 	mkdir -p $(BIN_DIR)
+	# Basics (Design Patterns)
+	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/basics
 	# Easy problems
 	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/easy/two_sum
 	mkdir -p $(BUILD_DIR)/$(SRC_DIR)/easy/best_time_to_buy_and_sell_stock
@@ -109,13 +111,18 @@ install-deps:
 	sudo apt-get update
 	sudo apt-get install -y build-essential cmake
 
+# Build design patterns demo
+patterns-demo: | $(BUILD_DIR)
+	$(CXX) $(CXXFLAGS) $(SRC_DIR)/basics/*.cpp -o $(BUILD_DIR)/design_patterns_demo
+
 # Show help
 help:
 	@echo "Available targets:"
 	@echo "  all          - Build main executable and tests"
 	@echo "  test         - Run tests"
+	@echo "  patterns-demo - Build and run design patterns demonstration"
 	@echo "  clean        - Remove build files"
 	@echo "  install-deps - Install build dependencies"
 	@echo "  help         - Show this help message"
 
-.PHONY: all test clean install-deps help
+.PHONY: all test patterns-demo clean install-deps help

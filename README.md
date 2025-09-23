@@ -162,6 +162,28 @@ This repository contains my solutions to LeetCode problems implemented in C++. T
 ```
 leetcode_cpp/
 ├── src/                                    # Source code directory
+│   ├── basics/                           # OOP Design Patterns (examples)
+│   │   ├── adapter_pattern.{h,cpp}
+│   │   ├── bridge_pattern.{h,cpp}
+│   │   ├── builder_pattern.{h,cpp}
+│   │   ├── chain_of_responsibility_pattern.{h,cpp}
+│   │   ├── command_pattern.{h,cpp}
+│   │   ├── composite_pattern.{h,cpp}
+│   │   ├── decorator_pattern.{h,cpp}
+│   │   ├── facade_pattern.{h,cpp}
+│   │   ├── factory_pattern.{h,cpp}
+│   │   ├── flyweight_pattern.{h,cpp}
+│   │   ├── interpreter_pattern.{h,cpp}
+│   │   ├── iterator_pattern.{h,cpp}
+│   │   ├── mediator_pattern.{h,cpp}
+│   │   ├── memento_pattern.{h,cpp}
+│   │   ├── observer_pattern.{h,cpp}
+│   │   ├── prototype_pattern.{h,cpp}
+│   │   ├── proxy_pattern.{h,cpp}
+│   │   ├── singleton_pattern.{h,cpp}
+│   │   ├── strategy_pattern.{h,cpp}
+│   │   ├── template_method_pattern.{h,cpp}
+│   │   └── visitor_pattern.{h,cpp}
 │   ├── easy/                              # Easy difficulty problems
 │   │   ├── two_sum/
 │   │   │   ├── solution.h                 # Header file
@@ -299,6 +321,8 @@ leetcode_cpp/
 │   │       └── solution.cpp
 │   └── main.cpp                           # Main executable
 ├── tests/                                 # Test files
+│   ├── basics/
+│   │   └── test_design_patterns.cpp
 │   ├── easy/
 │   │   ├── test_two_sum.cpp
 │   │   ├── test_best_time_to_buy_and_sell_stock.cpp
@@ -433,6 +457,12 @@ make run_tests
 make test
 ```
 
+#### Build Design Patterns Demo (Basics)
+```bash
+make patterns-demo
+./build/design_patterns_demo
+```
+
 #### Clean Build Files
 ```bash
 make clean
@@ -488,6 +518,16 @@ This will run demonstrations of all implemented solutions with sample test cases
 ```
 
 This will run all test cases and report results.
+
+### Basics: Design Patterns Tests
+- Build and run only the basics patterns test:
+```bash
+g++ -std=c++17 -I src tests/basics/test_design_patterns.cpp -o /tmp/test_design_patterns && /tmp/test_design_patterns
+```
+- Or after a normal build (recommended), run the generated binary:
+```bash
+./build/tests/basics/test_design_patterns.exe
+```
 
 ## 📚 Adding New Solutions
 
