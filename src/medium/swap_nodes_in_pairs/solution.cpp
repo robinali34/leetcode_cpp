@@ -12,30 +12,18 @@ using namespace std;
 namespace SwapNodesInPairs {
 
 ListNode* Solution::swapPairs(ListNode* head) {
-    if (head == nullptr || head->next == nullptr) {
-        return head;
-    }
-    
-    ListNode *dummy = new ListNode(0);
-    dummy->next = head;
-    ListNode *prev = dummy;
-    
-    while (prev->next != nullptr && prev->next->next != nullptr) {
-        ListNode *first = prev->next;
-        ListNode *second = prev->next->next;
-        
-        // Swap nodes
+    ListNode dummy(-1);
+    dummy.next = head;
+    ListNode *pre = &dummy;
+    while((head != nullptr) && (head->next != nullptr)) {
+        ListNode *first = head, *second = head->next;
+        pre->next = second;
         first->next = second->next;
         second->next = first;
-        prev->next = second;
-        
-        // Move to next pair
-        prev = first;
+        pre = first;
+        head = first->next;
     }
-    
-    ListNode *result = dummy->next;
-    delete dummy;
-    return result;
+    return dummy.next;
 }
 
 }

@@ -16,6 +16,7 @@ namespace ContainsDuplicate {
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums);
+    bool containsDuplicateHashMap(vector<int>& nums);
 };
 }
 

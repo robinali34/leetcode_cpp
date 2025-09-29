@@ -13,43 +13,33 @@ using namespace std;
 namespace CopyListWithRandomPointer {
 
 Node* Solution::copyRandomList(Node* head) {
-    if (head == nullptr) {
-        return nullptr;
+    if (!head) return nullptr;
+    Node* ptr = head;
+    while (ptr != nullptr) {
+        Node* newNode = new Node(ptr->val, nullptr, nullptr);
+        newNode->next = ptr->next;
+        ptr->next = newNode;
+        ptr = newNode->next;
+    }
+    ptr = head;
+    while(ptr != nullptr) {
+        ptr->next->random = 
+            (ptr->random != nullptr) ? ptr->random->next : nullptr;
+        ptr = ptr->next->next;
     }
     
-    // First pass: create copy nodes and interleave them
-    Node *current = head;
-    while (current != nullptr) {
-        Node *copy = new Node(current->val);
-        copy->next = current->next;
-        current->next = copy;
-        current = copy->next;
+    Node* ptr_old_list = head;
+    Node* ptr_new_list = head->next;
+    Node* head_old = head->next;
+    while(ptr_old_list != nullptr) {
+        ptr_old_list->next = ptr_old_list->next->next;
+        ptr_new_list->next = (ptr_new_list->next != nullptr)
+                                ? ptr_new_list->next->next
+                                : nullptr;
+        ptr_old_list = ptr_old_list->next;
+        ptr_new_list = ptr_new_list->next;
     }
-    
-    // Second pass: set random pointers
-    current = head;
-    while (current != nullptr) {
-        if (current->random != nullptr) {
-            current->next->random = current->random->next;
-        }
-        current = current->next->next;
-    }
-    
-    // Third pass: separate original and copy lists
-    Node *dummy = new Node(0);
-    Node *copyCurrent = dummy;
-    current = head;
-    
-    while (current != nullptr) {
-        copyCurrent->next = current->next;
-        copyCurrent = copyCurrent->next;
-        current->next = current->next->next;
-        current = current->next;
-    }
-    
-    Node *result = dummy->next;
-    delete dummy;
-    return result;
+    return head_old;
 }
 
 }

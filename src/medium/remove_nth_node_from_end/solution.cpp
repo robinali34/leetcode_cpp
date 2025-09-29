@@ -12,31 +12,19 @@ using namespace std;
 namespace RemoveNthNodeFromEnd {
 
 ListNode* Solution::removeNthFromEnd(ListNode* head, int n) {
-    ListNode *dummy = new ListNode(0);
-    dummy->next = head;
-    
-    ListNode *first = dummy;
-    ListNode *second = dummy;
-    
-    // Move first pointer n+1 steps ahead
-    for (int i = 0; i <= n; i++) {
+    ListNode dummy(0); // Not dynamically allocated
+    dummy.next = head;
+    ListNode *first = &dummy;
+    ListNode *second = &dummy;
+    for(int i = 0; i <= n; i++) {
         first = first->next;
     }
-    
-    // Move both pointers until first reaches end
-    while (first != nullptr) {
+    while(first != NULL) {
         first = first->next;
         second = second->next;
     }
-    
-    // Remove the nth node from end
-    ListNode *temp = second->next;
     second->next = second->next->next;
-    delete temp;
-    
-    ListNode *result = dummy->next;
-    delete dummy;
-    return result;
+    return dummy.next;
 }
 
 }

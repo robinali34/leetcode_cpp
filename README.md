@@ -6,54 +6,114 @@
 
 This repository contains my solutions to LeetCode problems implemented in C++. The project is designed with a clean, modular architecture that makes it easy to add new solutions and maintain existing code.
 
+## 🚀 Quick Start
+
+### Build and Test Everything
+```bash
+make clean && make test
+```
+
+### Run Tests by Difficulty
+```bash
+./run_tests.sh easy      # Easy problems
+./run_tests.sh medium    # Medium problems  
+./run_tests.sh hard      # Hard problems
+./run_tests.sh basics    # Design patterns
+```
+
+### Run Main Demo
+```bash
+make leetcode_cpp && ./build/bin/leetcode_cpp
+```
+
 ## 📊 LeetCode Solutions
+
 
 | Idx | ID    | Problem Name                                           | Difficulty | Wiki | Solution                                                  |
 |-----|-------|--------------------------------------------------------|------------|------|-----------------------------------------------------------|
-|   1 |   1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/two_sum/solution.cpp) |
-|   2 |   2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/add_two_numbers/solution.cpp) |
-|   3 |   3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/longest_substring_without_repeating_characters/solution.cpp) |
-|   4 |  19 | [Remove Nth Node From End](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/remove_nth_node_from_end/solution.cpp) |
-|   5 |  21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/merge_two_sorted_lists/solution.cpp) |
-|   6 |  24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/swap_nodes_in_pairs/solution.cpp) |
-|   7 |  25 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Hard       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/hard/reverse_nodes_in_k_group/solution.cpp) |
-|   8 |  26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/remove_duplicates_from_sorted_array/solution.cpp) |
-|   9 |  36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/valid_sudoku/solution.cpp) |
-|  10 |  41 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Hard       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/hard/first_missing_positive/solution.cpp) |
-|  11 |  53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/maximum_subarray/solution.cpp) |
-|  12 |  56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/merge_intervals/solution.cpp) |
-|  13 |  57 | [Insert Interval](https://leetcode.com/problems/insert-interval/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/insert_interval/solution.cpp) |
-|  14 |  61 | [Rotate List](https://leetcode.com/problems/rotate-list/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/rotate_list/solution.cpp) |
-|  15 |  82 | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/remove_duplicates_from_sorted_list_ii/solution.cpp) |
-|  16 |  83 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/remove_duplicates_from_sorted_list/solution.cpp) |
-|  17 |  86 | [Partition List](https://leetcode.com/problems/partition-list/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/partition_list/solution.cpp) |
-|  18 | 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/best_time_to_buy_and_sell_stock/solution.cpp) |
-|  19 | 122 | [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/best_time_to_buy_and_sell_stock_ii/solution.cpp) |
-|  20 | 128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/longest_consecutive_sequence/solution.cpp) |
-|  21 | 138 | [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/copy_list_with_random_pointer/solution.cpp) |
-|  22 | 141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/linked_list_cycle/solution.cpp) |
-|  23 | 142 | [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/linked_list_cycle_ii/solution.cpp) |
-|  24 | 143 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/reorder_list/solution.cpp) |
-|  25 | 146 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/lru_cache/solution.cpp) |
-|  26 | 152 | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/maximum_product_subarray/solution.cpp) |
-|  27 | 160 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/intersection_of_two_linked_lists/solution.cpp) |
-|  28 | 189 | [Rotate Array](https://leetcode.com/problems/rotate-array/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/rotate_array/solution.cpp) |
-|  29 | 202 | [Happy Number](https://leetcode.com/problems/happy-number/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/happy_number/solution.cpp) |
-|  30 | 205 | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/isomorphic_strings/solution.cpp) |
-|  31 | 206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/reverse_linked_list/solution.cpp) |
-|  32 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/contains_duplicate/solution.cpp) |
-|  33 | 234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/palindrome_linked_list/solution.cpp) |
-|  34 | 238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/product_of_array_except_self/solution.cpp) |
-|  35 | 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/valid_anagram/solution.cpp) |
-|  36 | 287 | [Find Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/find_duplicate_number/solution.cpp) |
-|  37 | 290 | [Word Pattern](https://leetcode.com/problems/word-pattern/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/word_pattern/solution.cpp) |
-|  38 | 328 | [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/odd_even_linked_list/solution.cpp) |
-|  39 | 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/top_k_frequent_elements/solution.cpp) |
-|  40 | 380 | [Randomized Set](https://leetcode.com/problems/insert-delete-getrandom-o1/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/randomized_set/solution.cpp) |
-|  41 | 430 | [Flatten a Multilevel Doubly Linked List](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/flatten_multilevel_doubly_linked_list/solution.cpp) |
-|  42 | 435 | [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/non_overlapping_intervals/solution.cpp) |
-|  43 | 707 | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/design_linked_list/solution.cpp) |
-|  44 | 1060 | [Missing Element in Sorted Array](https://leetcode.com/problems/missing-element-in-sorted-array/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/missing_element_in_sorted_array/solution.cpp) |
+|   1 |    1 | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/two_sum/solution.cpp) |
+|   2 |    2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/add_two_numbers/solution.cpp) |
+|   3 |    3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/longest_substring_without_repeating_characters/solution.cpp) |
+|   4 |    5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/longest_palindromic_substring/solution.cpp) |
+|   5 |    6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/zigzag_conversion/solution.cpp) |
+|   6 |    7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/reverse_integer/solution.cpp) |
+|   7 |    8 | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/string_to_integer/solution.cpp) |
+|   8 |    9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/palindrome_number/solution.cpp) |
+|   9 |   11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/container_with_most_water/solution.cpp) |
+|  10 |   12 | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/integer_to_roman/solution.cpp) |
+|  11 |   19 | [Remove Nth Node From End](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/remove_nth_node_from_end/solution.cpp) |
+|  12 |   21 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/merge_two_sorted_lists/solution.cpp) |
+|  13 |   23 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Hard       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/hard/merge_k_sorted_lists/solution.cpp) |
+|  14 |   24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/swap_nodes_in_pairs/solution.cpp) |
+|  15 |   25 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Hard       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/hard/reverse_nodes_k_group/solution.cpp) |
+|  16 |   25 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Hard       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/hard/reverse_nodes_in_k_group/solution.cpp) |
+|  17 |   26 | [Remove Duplicates from Sorted Array solution](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/remove_duplicates_from_sorted_array/solution.cpp) |
+|  18 |   31 | [Next Permutation](https://leetcode.com/problems/next-permutation/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/next_permutation/solution.cpp) |
+|  19 |   33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/search_rotated_sorted_array/solution.cpp) |
+|  20 |   36 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/valid_sudoku/solution.cpp) |
+|  21 |   41 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Hard       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/hard/first_missing_positive/solution.cpp) |
+|  22 |   48 | [Rotate Image](https://leetcode.com/problems/rotate-image/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/rotate_image/solution.cpp) |
+|  23 |   53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/maximum_subarray/solution.cpp) |
+|  24 |   56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/merge_intervals/solution.cpp) |
+|  25 |   57 | [Insert Interval](https://leetcode.com/problems/insert-interval/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/insert_interval/solution.cpp) |
+|  26 |   61 | [Rotate List](https://leetcode.com/problems/rotate-list/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/rotate_list/solution.cpp) |
+|  27 |   62 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/unique_paths/solution.cpp) |
+|  28 |   82 | [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/remove_duplicates_from_sorted_list_ii/solution.cpp) |
+|  29 |   83 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/remove_duplicates_from_sorted_list/solution.cpp) |
+|  30 |   86 | [Partition List](https://leetcode.com/problems/partition-list/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/partition_list/solution.cpp) |
+|  31 |   88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/merge_sorted_array/solution.cpp) |
+|  32 |  102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/binary_tree_level_order/solution.cpp) |
+|  33 |  118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/pascal_triangle/solution.cpp) |
+|  34 |  121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/best_time_to_buy_and_sell_stock/solution.cpp) |
+|  35 |  122 | [Best Time to Buy and Sell Stock II solution](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/best_time_to_buy_and_sell_stock_ii/solution.cpp) |
+|  36 |  128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/longest_consecutive_sequence/solution.cpp) |
+|  37 |  136 | [Single Number](https://leetcode.com/problems/single-number/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/single_number/solution.cpp) |
+|  38 |  138 | [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/copy_list_with_random_pointer/solution.cpp) |
+|  39 |  141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/linked_list_cycle/solution.cpp) |
+|  40 |  142 | [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/linked_list_cycle_ii/solution.cpp) |
+|  41 |  143 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/reorder_list/solution.cpp) |
+|  42 |  146 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/lru_cache/solution.cpp) |
+|  43 |  150 | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/evaluate_reverse_polish_notation/solution.cpp) |
+|  44 |  152 | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/maximum_product_subarray/solution.cpp) |
+|  45 |  160 | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/intersection_of_two_linked_lists/solution.cpp) |
+|  46 |  189 | [Rotate Array solution](https://leetcode.com/problems/rotate-array/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/rotate_array/solution.cpp) |
+|  47 |  202 | [Happy Number](https://leetcode.com/problems/happy-number/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/happy_number/solution.cpp) |
+|  48 |  205 | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/isomorphic_strings/solution.cpp) |
+|  49 |  206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/reverse_linked_list/solution.cpp) |
+|  50 |  215 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/kth_largest_element/solution.cpp) |
+|  51 |  217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/contains_duplicate/solution.cpp) |
+|  52 |  234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/palindrome_linked_list/solution.cpp) |
+|  53 |  237 | [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/delete_node_linked_list/solution.cpp) |
+|  54 |  238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/product_of_array_except_self/solution.cpp) |
+|  55 |  242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/valid_anagram/solution.cpp) |
+|  56 |  246 | [Strobogrammatic Number](https://leetcode.com/problems/strobogrammatic-number/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/strobogrammatic_number/solution.cpp) |
+|  57 |  287 | [Find Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/find_duplicate_number/solution.cpp) |
+|  58 |  290 | [Word Pattern](https://leetcode.com/problems/word-pattern/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/word_pattern/solution.cpp) |
+|  59 |  317 | [Shortest Distance from All Buildings](https://leetcode.com/problems/shortest-distance-from-all-buildings/) | Hard       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/hard/shortest_distance_buildings/solution.cpp) |
+|  60 |  328 | [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/odd_even_linked_list/solution.cpp) |
+|  61 |  347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/top_k_frequent_elements/solution.cpp) |
+|  62 |  380 | [Randomized Set](https://leetcode.com/problems/insert-delete-getrandom-o1/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/randomized_set/solution.cpp) |
+|  63 |  430 | [Flatten a Multilevel Doubly Linked List](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/flatten_multilevel_doubly_linked_list/solution.cpp) |
+|  64 |  434 | [Number of Segments in a String](https://leetcode.com/problems/number-of-segments-in-a-string/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/number_of_segments_in_string/solution.cpp) |
+|  65 |  435 | [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/non_overlapping_intervals/solution.cpp) |
+|  66 |  437 | [Path Sum III](https://leetcode.com/problems/path-sum-iii/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/path_sum_iii/solution.cpp) |
+|  67 |  529 | [Minesweeper](https://leetcode.com/problems/minesweeper/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/minesweeper/solution.cpp) |
+|  68 |  577 | [Employee Bonus](https://leetcode.com/problems/employee-bonus/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/employee_bonus/solution.cpp) |
+|  69 |  609 | [Find Duplicate File in System](https://leetcode.com/problems/find-duplicate-file-in-system/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/find_duplicate_file/solution.cpp) |
+|  70 |  617 | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/merge_two_binary_trees/solution.cpp) |
+|  71 |  641 | [Design Circular Deque](https://leetcode.com/problems/design-circular-deque/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/design_circular_deque/solution.cpp) |
+|  72 |  680 | [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/valid_palindrome_ii/solution.cpp) |
+|  73 |  704 | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/binary_search/solution.cpp) |
+|  74 |  707 | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/design_linked_list/solution.cpp) |
+|  75 |  725 | [Split Linked List in Parts](https://leetcode.com/problems/split-linked-list-in-parts/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/split_linked_list_in_parts/solution.cpp) |
+|  76 |  791 | [Custom Sort String](https://leetcode.com/problems/custom-sort-string/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/custom_sort_string/solution.cpp) |
+|  77 |  794 | [Valid Tic-Tac-Toe State](https://leetcode.com/problems/valid-tic-tac-toe-state/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/valid_tic_tac_toe_state/solution.cpp) |
+|  78 | 1011 | [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/capacity_to_ship_packages/solution.cpp) |
+|  79 | 1060 | [Missing Element in Sorted Array](https://leetcode.com/problems/missing-element-in-sorted-array/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/missing_element_in_sorted_array/solution.cpp) |
+|  80 | 1091 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/shortest_path_binary_matrix/solution.cpp) |
+|  81 | 1150 | [Check If a Number Is Majority Element in a Sorted Array](https://leetcode.com/problems/check-if-a-number-is-majority-element-in-a-sorted-array/) | Easy       |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/majority_element_sorted_array/solution.cpp) |
+|  82 | 1242 | [Web Crawler Multithreaded](https://leetcode.com/problems/web-crawler-multithreaded/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/web_crawler_multithreaded/solution.cpp) |
+|  83 | 2265 | [Count Nodes Equal to Average of Subtree](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | Medium     |      | [Solution](https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/medium/count_nodes_equal_to_average/solution.cpp) |
 
 [Two Sum]: https://leetcode.com/problems/two-sum/
 [Two Sum Solution]: https://github.com/robinali34/leetcode_c_cplusplus/blob/main/src/easy/two_sum/solution.cpp
@@ -643,17 +703,101 @@ make clean && make all
 ## 🧪 Testing
 
 ### Running All Tests
+
+#### Method 1: Using Make (Recommended)
 ```bash
+# Build and run all tests
 make test
+
+# Clean and rebuild all tests
+make clean && make test
+```
+
+#### Method 2: Using Test Script by Difficulty
+```bash
+# Run tests by difficulty level
+./run_tests.sh easy      # Run all easy problem tests
+./run_tests.sh medium    # Run all medium problem tests  
+./run_tests.sh hard      # Run all hard problem tests
+./run_tests.sh basics    # Run design patterns tests
+```
+
+#### Method 3: Manual Compilation and Execution
+```bash
+# Build all test executables
+make test
+
+# Run individual test categories
+find build/tests/easy -name "*.exe" -exec {} \;
+find build/tests/medium -name "*.exe" -exec {} \;
+find build/tests/hard -name "*.exe" -exec {} \;
+find build/tests/basics -name "*.exe" -exec {} \;
 ```
 
 ### Running Individual Test Files
+
+#### Compile and Run Single Test
 ```bash
 # Compile specific test
-g++ -std=c++17 -I src tests/easy/test_your_problem.cpp -o test_your_problem
+g++ -std=c++17 -Wall -Wextra -g tests/easy/test_two_sum.cpp -o test_two_sum
 
 # Run test
-./test_your_problem
+./test_two_sum
+```
+
+#### Run Pre-built Test Executables
+```bash
+# After running 'make test', run individual tests
+./build/tests/easy/test_two_sum.exe
+./build/tests/medium/test_add_two_numbers.exe
+./build/tests/hard/test_first_missing_positive.exe
+./build/tests/basics/test_design_patterns.exe
+```
+
+### Test Categories
+
+#### 1. LeetCode Problem Tests
+- **Easy Tests**: `tests/easy/test_*.cpp`
+- **Medium Tests**: `tests/medium/test_*.cpp`  
+- **Hard Tests**: `tests/hard/test_*.cpp`
+
+#### 2. Design Pattern Tests
+- **Basics Tests**: `tests/basics/test_design_patterns.cpp`
+- Tests all 22 design patterns implemented in `src/basics/`
+
+### Test Output Examples
+
+#### Successful Test Run
+```bash
+$ ./run_tests.sh easy
+[INFO] Running easy tests...
+[INFO] Running test_two_sum...
+[SUCCESS] test_two_sum passed
+
+[INFO] Running test_contains_duplicate...
+[SUCCESS] test_contains_duplicate passed
+
+==========================================
+[INFO] easy tests summary:
+Total tests: 14
+[SUCCESS] Passed: 14
+[ERROR] Failed: 0
+==========================================
+```
+
+#### Failed Test Run
+```bash
+$ ./run_tests.sh medium
+[INFO] Running medium tests...
+[INFO] Running test_add_two_numbers...
+[FAILURE] test_add_two_numbers failed
+
+==========================================
+[INFO] medium tests summary:
+Total tests: 25
+[SUCCESS] Passed: 24
+[ERROR] Failed: 1
+==========================================
 ```
 
 ### Adding Test Cases
@@ -661,6 +805,31 @@ g++ -std=c++17 -I src tests/easy/test_your_problem.cpp -o test_your_problem
 2. **Normal Cases**: Typical input scenarios
 3. **Boundary Cases**: Values at the limits of constraints
 4. **Performance Cases**: Large inputs for time complexity validation
+
+### Test File Structure
+Each test file follows this pattern:
+```cpp
+#include <cassert>
+#include <iostream>
+#include "../../src/[difficulty]/[problem_name]/solution.h"
+#include "../../src/[difficulty]/[problem_name]/solution.cpp"
+
+using namespace std;
+
+void test_[problem_name]() {
+    [ProblemName]::Solution solution;
+    
+    // Test cases with assertions
+    assert(solution.method(input) == expected_output);
+    
+    cout << "All [problem_name] tests passed!" << endl;
+}
+
+int main() {
+    test_[problem_name]();
+    return 0;
+}
+```
 
 ## 🔧 Configuration
 
@@ -762,7 +931,26 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔄 Changelog
 
-### Version 3.0.0 (Current)
+### Version 3.2.0 (Current)
+- Added multiple solutions for Add Two Numbers problem
+- **Easy Problems (1 new)**:
+  - Check If a Number Is Majority Element in a Sorted Array (1150)
+- **Enhanced Solutions**:
+  - Add Two Numbers (2) - Added second implementation approach (addTwoNumbersV2)
+
+### Version 3.1.0
+- Added 7 new LeetCode solutions
+- **Easy Problems (2 new)**:
+  - Number of Segments in a String (434)
+  - Employee Bonus (577)
+- **Medium Problems (5 new)**:
+  - Evaluate Reverse Polish Notation (150)
+  - Web Crawler Multithreaded (1242)
+  - Count Nodes Equal to Average of Subtree (2265)
+  - Split Linked List in Parts (725)
+  - Path Sum III (437)
+
+### Version 3.0.0
 - Added 31 new LeetCode solutions
 - **Easy Problems (9 new)**:
   - Isomorphic Strings (205)
