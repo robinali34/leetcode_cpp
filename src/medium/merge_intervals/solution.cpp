@@ -24,7 +24,7 @@ vector<vector<int>> Solution::merge(vector<vector<int>>& intervals) {
             vector<vector<int>> merged;
     merged.push_back(intervals[0]);
     
-    for (int i = 1; i < intervals.size(); i++) {
+    for (size_t i = 1; i < intervals.size(); i++) {
         if (merged.back()[1] >= intervals[i][0]) {
             // Overlapping intervals, merge them
             merged.back()[1] = max(merged.back()[1], intervals[i][1]);
@@ -46,7 +46,7 @@ vector<vector<int>> Solution::merge2(vector<vector<int>>& intervals) {
     vector<vector<int>> result;
     vector<int> current = intervals[0];
     
-    for (int i = 1; i < intervals.size(); i++) {
+    for (size_t i = 1; i < intervals.size(); i++) {
         // If current interval overlaps with next interval
         if (current[1] >= intervals[i][0]) {
             // Merge them by updating the end time
